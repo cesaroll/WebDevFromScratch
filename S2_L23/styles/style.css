@@ -1,0 +1,55 @@
+.cesar{
+    color: yellow;
+    font-size: 25px;
+}
+
+p.intro{
+    color: orange;
+    font-size: 30px;
+    
+}
+
+.spantag{
+    font-size: 40px;
+    color: blue;
+}
+
+#sentence{
+    font-size: 35px;
+    color: aquamarine;
+}
+
+/* w3schools borders in google */
+
+#container{
+    border: 1px solid red;
+    height: auto;
+    width: 700px;
+    position: relative;
+    margin: 0px auto;
+}
+
+#intro{
+    border: 2px solid black;
+    color: blue;
+    width: 180px;
+    height: auto;
+    background-color: aqua;
+    position: absolute;
+}
+
+#overview{
+    border: 1px solid black;
+    color: blue;
+    width: 100%;
+    height: auto;
+    background-color: burlywood;
+}
+
+#motivation{
+    border: 1px solid black;
+    color: blue;
+    width: 100%;
+    height: auto;
+    background-color: cadetblue;
+}

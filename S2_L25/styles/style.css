@@ -25,6 +25,44 @@ body{
     background-color: #FFFF66;   
 }
 
+#nav{
+    border: 1px solid black;
+    height: 50px;
+    width: 300px;
+    background-color: white;
+    margin: 0px auto;
+}
+
+#nav ul {
+    list-style-type: none;
+}
+
+#nav ul li {
+    border: 1px solid black;
+    width: 70px;
+    display: inline;
+    padding: 10px;
+}
+
+#nav ul li a:link{
+    text-decoration: none;
+}
+
+#nav ul li a:visited{
+    text-decoration: none;
+    color: blue;
+}
+
+#nav ul li a:hover{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#nav ul li a:active{
+    text-decoration: none;
+    color: red;
+}
+
 #container{
     border: 1px solid red;
     height: auto;

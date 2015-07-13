@@ -18,3 +18,4 @@ document.write(candy+shoe);
 var title = "News on Monday";
 var desc = "Someone got killed";
 document.write("<br />"+"<h1>"+title+"</h1>"+desc);
+

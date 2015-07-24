@@ -7,6 +7,8 @@
     
     document.writeln("Test:");
     
+    var age = 37;
+    
     function FirstName(fName) {
         document.write(fName+" ");   
     }
@@ -15,13 +17,15 @@
         document.write(lName);    
     }
     
+    function Age() {
+        return " is "+age+" years old";
+    }
+    
     function Name(fName, lName) {
         FirstName(fName);
         LastName(lName);
+        document.write(Age());
     }
-    
-    //FirstName("Cesar");
-    //LastName("Lopez");
     
     Name("Cesar", "Lopez");
     

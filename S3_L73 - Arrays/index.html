@@ -1,0 +1,42 @@
+<html>
+<head>
+
+<title></title>
+    
+<script type="text/javascript" >
+    
+    
+    function PrintArray(arr) {        
+        
+        for(var i=0; i<arr.length; i++)
+        {
+            document.write(arr[i]+"<BR />");
+        }
+        
+        document.write("<BR /><BR />");
+    }
+    
+    var cars = new Array("Ferrari", "Mercedez", "Ford", "Range Rover");
+    
+    PrintArray(cars);
+    
+    var cars2 = ["Ferrari", "Kia", "Nissan", "Hyundai"];
+    
+    cars2.length = 3;
+    cars2.reverse();
+    
+    PrintArray(cars2);
+    
+    cars2.push("Ford");
+    PrintArray(cars2);
+        
+</script>
+    
+</head>
+
+<body>
+
+    
+</body>
+    
+</html>

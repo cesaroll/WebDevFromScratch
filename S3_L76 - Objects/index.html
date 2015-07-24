@@ -1,0 +1,72 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<html>
+<head>
+	<title></title>
+
+	<meta http-equiv="content-type" content="text/html; charset-UTF-8" />
+    <meta name="keywords" content="" />
+    <meta name="description" content=""/>
+    <meta name="author" content="Cesar Lopez" />
+
+<script type="text/javascript">
+
+    var dwarf = new Object();
+    
+    dwarf.strength = "8";
+    dwarf.armor = "6";
+    dwarf.attack = "7";
+    dwarf.ShowProperties = function () {
+        
+        document.write("Hero Strength: "+dwarf.strength+"<BR />"+
+                       "Hero armor: "+dwarf.armor+"<BR />"+
+                       "Hero Attack: "+dwarf.attack+"<BR />");
+    };
+    
+    dwarf.ShowProperties();
+    
+    var knigth = {
+     
+        strength: "10",
+        armor: "12",
+        attack: "10",
+        ShowProperties: function () {
+        
+            document.write("Hero Strength: "+knigth.strength+"<BR />"+
+                           "Hero armor: "+knigth.armor+"<BR />"+
+                           "Hero Attack: "+knigth.attack+"<BR />");
+        }
+    }
+    
+    knigth.ShowProperties();
+    
+    //Constructor Function
+    function Hero(name, strength, armor, attack) {
+        this.name = name;
+        this.strength = strength;
+        this.armor = armor;
+        this.attack = attack;
+        
+        this.ShowProperties = function () {
+            document.write("<BR />Hero Name: "+barbarian.name+"<BR />"+
+                           "Hero Strength: "+barbarian.strength+"<BR />"+
+                           "Hero armor: "+barbarian.armor+"<BR />"+
+                           "Hero Attack: "+barbarian.attack+"<BR />");  
+        };
+        
+    }
+    
+    var barbarian = new Hero("Barbarian", "10", "4", "9");
+    barbarian.ShowProperties();
+    
+    
+</script>
+</head>
+<body>
+
+</body>
+</html>

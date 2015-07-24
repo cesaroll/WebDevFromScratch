@@ -1,0 +1,41 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<html>
+<head>
+	<title></title>
+
+	<meta http-equiv="content-type" content="text/html; charset-UTF-8" />
+    <meta name="keywords" content="" />
+    <meta name="description" content=""/>
+    <meta name="author" content="Cesar Lopez" />
+
+</head>
+<body>
+
+    <form id="form1" >
+    
+        Title: <input type="text" id="title1" size="25"><br /><br />
+        Description: <input type="text" id="desc1" size="55"><br /><br />
+        <input type="button" value="Submit" onclick="doit();">
+        
+    </form>
+    
+<script type="text/javascript">
+
+    function doit() {
+     
+        var title = document.getElementById("title1").value;
+        var desc = document.getElementById("desc1").value;
+        
+        document.write("<br /><br /><H3>Title: </H3>"+title);
+        document.write("<br /><H3>Description: </H3>"+desc);
+    }
+    
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<html>
+<head>
+	<title></title>
+
+	<meta http-equiv="content-type" content="text/html; charset-UTF-8" />
+    <meta name="keywords" content="" />
+    <meta name="description" content=""/>
+    <meta name="author" content="Cesar Lopez" />
+
+    
+
+</head>
+<body>
+
+    <h1>Title news</h1>
+    <h2>These are today's news</h2>
+    
+    <div id="news1">Today's news are nothing special. please come back tomorrow...</div>
+
+<script type="text/javascript">
+    
+    var firstElement = document.getElementById("news1").innerHTML;
+    
+    alert(firstElement);
+          
+    //DOM Nodes
+    
+    //document.images[0]
+    //document.forms[0].element[3].innerHTML
+          
+    var parent = document.childNodes[0];
+    alert(parent.nodeName);
+    
+    
+    var child = document.childNodes[1].childNodes[2];
+    alert(child.innerHTML);
+    
+    var child2 = document.childNodes[1].childNodes[2].childNodes[5];
+    alert(child2.innerHTML);
+    
+</script>
+    
+</body>
+</html>

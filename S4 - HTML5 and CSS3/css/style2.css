@@ -1,0 +1,12 @@
+/* Pseudo Classes */
+p:nth-child(odd) {
+    color: red;
+}
+
+p:nth-child(even) {
+    color: limegreen;
+}
+
+p:nth-child(2) {
+    color: blue;
+}

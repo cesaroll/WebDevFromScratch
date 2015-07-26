@@ -1,0 +1,15 @@
+
+/* ^= start with */
+p[name^="kid"] {
+    color: red;   
+}
+
+/* $= end with */
+p[name$="dos"] {
+    color: blue;   
+}
+
+/* *= anyplace */
+p[name*="w"] {
+    color: limegreen;   
+}

@@ -1,0 +1,19 @@
+p {
+    font-size: 20px;   
+}
+
+#this {
+    font-size: 35px;   
+}
+
+p[name] {
+    font-family: cursive;   
+}
+
+p[id] {
+    color: coral;   
+}
+
+p[id="third"] {
+    font-weight: bold;   
+}

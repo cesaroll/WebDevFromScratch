@@ -1,0 +1,15 @@
+* {
+    color: blue;
+}
+
+#big > p {
+    color: green;
+}
+
+:not(.one) {
+    color: red;   
+}
+
+p.two + p {
+ font-family: cursive;   
+}

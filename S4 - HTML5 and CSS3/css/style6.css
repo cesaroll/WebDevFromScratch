@@ -1,0 +1,81 @@
+/* Flexible Box Model */
+
+/* apply to all web page*/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+header, section, footer, aside, navm article, hgroup {
+ display: block;   
+}
+
+
+body {
+    width: 100%;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+}
+
+
+#wrapper {
+    max-width: 1000px;
+    margin: 20px 0px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-flex: 1;
+}
+
+#head {
+    background: orange;
+    border: 2px solid black;
+    padding: 20px;
+}
+
+#navigation {
+    border: 1px solid red;
+    background: yellow;
+}
+
+#navigation li {
+    display: inline-block;
+    list-style: none;
+    padding: 3px;
+}
+
+#new {
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+}
+
+#main {
+    border: 1px solid black;
+    padding: 30px;
+    -webkit-box-flex: 1;
+}
+
+article {
+    border: 1px solid black;
+    display: -webkit-box;
+    padding: 10px;
+    margin: 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-flex: 1;
+}
+
+#side_box {
+    border: 1px solid green;
+    width: 230px;
+    padding: 10px;
+    margin: 10px;
+}
+
+#copyright {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid black;
+    margin-top: 20px;
+}
+
+
+

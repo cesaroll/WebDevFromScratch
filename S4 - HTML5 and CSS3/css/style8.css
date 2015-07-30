@@ -1,0 +1,42 @@
+/* Reverse Box Order */
+
+#parent {
+    border: 1px solid black;
+    display: -webkit-box;
+    width: 800px;
+    -webkit-box-pack: center; /* start|center|end */
+    -webkit-box-orient: horizontal;
+}
+
+#child1 {
+    border: 1px solid green;
+    background: yellow;
+    padding: 20px;
+    margin: 20px;
+    -webkit-box-ordinal-group: 2;
+}
+
+#child2 {
+    border: 1px solid green;
+    background: yellow;
+    padding: 20px;
+    margin: 20px;
+    -webkit-box-ordinal-group: 4;
+}
+
+#child3 {
+    border: 1px solid green;
+    background: yellow;
+    padding: 20px;
+    margin: 20px;
+    -webkit-box-ordinal-group: 3;
+}
+
+#child4 {
+    border: 1px solid green;
+    background: yellow;
+    padding: 20px;
+    margin:   20px;
+}
+
+

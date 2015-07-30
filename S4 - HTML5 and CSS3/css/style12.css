@@ -1,0 +1,31 @@
+/* Text Shadow, Gradient and Alpha */
+
+#main {
+    border: 1px solid black;
+    width: 300px;
+    background: -webkit-linear-gradient(top,black,white);
+    text-align: center;
+    -webkit-border-radius: 18px;
+    -webkit-box-shadow: rgba(110,110,110,.3) 
+        8px 8px 8px; /* rgba --> Alpha*/
+}
+
+#text {
+    font: bold 30px Times New Roman;
+    text-shadow: rgb(110,110,100) 3px 3px 3px;
+}
+
+#pressed {
+    border: 1px solid black;
+    width: 300px;
+    background: -webkit-radial-gradient(center,circle,red 10%, orange 50%);
+    text-align: center;
+    -webkit-border-radius: 18px;
+    -webkit-box-shadow: rgb(110,110,110) 
+        8px 8px 8px inset;
+}
+
+#text2 {
+    font-size: 30px;
+    font-style: italic;
+}

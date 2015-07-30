@@ -1,9 +1,11 @@
-/* Flex Box */
+/* More Flexible Porperties */
 
 #parent {
     border: 1px solid black;
     display: -webkit-box;    
     -webkit-box-orient: horizontal;
+    height: 400px;
+    -webkit-box-align: center; /*start|center|end*/
 }
 
 #child1 {
@@ -11,7 +13,8 @@
     background: yellow;
     padding: 20px;
     margin: 20px;
-    
+    -webkit-box-flex: 1;
+    height: 100px;
 }
 
 #child2 {
@@ -19,7 +22,8 @@
     background: yellow;
     padding: 20px;
     margin: 20px;
-    
+    -webkit-box-flex: 1;
+    height: 100px;
 }
 
 #child3 {
@@ -28,6 +32,7 @@
     padding: 20px;
     margin: 20px;
     -webkit-box-flex: 1;
+    height: 100px;
 }
 
 #child4 {
@@ -35,6 +40,8 @@
     background: yellow;
     padding: 20px;
     margin:   20px;
+    -webkit-box-flex: 1;
+    height: 100px;
 }
 
 

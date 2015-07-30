@@ -1,0 +1,21 @@
+/* Rounded Corners and Shadows */
+
+#main {
+    border: 1px solid black;
+    width: 300px;
+    background: orange;
+    text-align: center;
+    -webkit-border-radius: 18px;
+    -webkit-box-shadow: rgb(110,110,110) 
+        8px 8px 8px;
+}
+
+#pressed {
+    border: 1px solid black;
+    width: 300px;
+    background: orange;
+    text-align: center;
+    -webkit-border-radius: 18px;
+    -webkit-box-shadow: rgb(110,110,110) 
+        8px 8px 8px inset;
+}

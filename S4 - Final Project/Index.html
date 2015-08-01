@@ -13,11 +13,11 @@
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-        
         <!-- JQuery CDN from Google -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         
         
     </head>
@@ -98,7 +98,7 @@
                 <p class="text-center"><em>Wanna tell us about the product? Click the following button.</em></p>
                 <p class="text-center"><a href="#section-contact" class="btn btn-default">Contact Us</a></p>
                 
-            </section>
+            </section><!-- end Testimonials Section-->
             
             <!-- Features -->
             <section>
@@ -166,10 +166,81 @@
                 </div>
                 
                 
-            </section>
+            </section><!-- end Features Section -->
+            
             
         </div><!-- end container -->
         
-
+        <!-- Trial -->
+        <section>
+            <div class="well">
+                <div class="container text-center">
+                    <h3>Subscribe now for a 30-day trial!</h3>
+                    <p>Enter your name and email bellow</p>
+                    
+                    <form action="#" class="form-inline" role="form">
+                        <div class="form-group">
+                            <label for="subscribe-name" class="sr-only">Name</label>
+                            <input type="text" id="subscribe-name" class="form-control" placeholder="Name">
+                        </div><!-- end form-group -->
+                        
+                        <div class="form-group">
+                            <label for="subscribe-email" class="sr-only">Email</label>
+                            <input type="text" id="subscribe-email" class="form-control" placeholder="Email">
+                        </div><!-- end form-group -->
+                        
+                        <button type="submit" class="btn btn-default">Subscribe</button>
+                        
+                        <p><small><em>Your email will not be used for SPAM</em></small></p>
+                        
+                    </form>
+                    
+                </div><!-- end container -->
+            </div><!-- end well -->
+        </section><!-- end Trial section -->
+        
+        <div class="container">
+           
+            <!-- Gallery -->
+            <section>
+                <div id="section-gallery" class="page-header">
+                    <h2>Gallery. <small>Take a look at our gallery product images.</small></h2>
+                </div><!-- end section-gallery -->
+                
+                <div id="gallery-carousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#gallery-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#gallery-carousel" data-slide-to="1"></li>
+                        <li data-target="#gallery-carousel" data-slide-to="2"></li>
+                    </ol>
+                    
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img src="imgs/slider-1.jpg" alt="Slider image" images="">
+                            <div class="carousel-caption">This is a caption</div>
+                        </div>
+                        <div class="item">
+                            <img src="imgs/slider-2.jpg" alt="Slider image"  images="">
+                            <div class="carousel-caption">This is a caption</div>
+                        </div>
+                        <div class="item">
+                            <img src="imgs/slider-3.jpg" alt="Slider image" images="">
+                            <div class="carousel-caption">This is a caption</div>
+                        </div>
+                    </div>
+                    
+                    <a href="#gallery-carousel" class="left carousel-control" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    
+                    <a href="#gallery-carousel" class="right carousel-control" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                    
+                </div><!-- end gallery-carousel -->
+                
+            </section><!-- end Gallery -->
+        </div>
+        
     </body>
 </html>

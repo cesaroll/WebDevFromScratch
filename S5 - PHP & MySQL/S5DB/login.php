@@ -4,8 +4,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     
     include("connection.php");
 
-    $login_email = $_POST["login_email"];
-    $login_password = $_POST["login_password"];
+    //Security functions
+    $login_email = mysqli_real_escape_string($dbc, trim($_POST["login_email"]));
+    $login_password = mysqli_real_escape_string($dbc, trim($_POST["login_password"]));
 
     $query = mysqli_query($dbc, "SELECT * from users WHERE email='$login_email' AND password='$login_password' ");
     $numrows = mysqli_num_rows($query);

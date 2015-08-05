@@ -90,5 +90,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             
         </form>        
 
+        <a href="output.php">Display records from DB</a>
+   
     </body>
 </html>

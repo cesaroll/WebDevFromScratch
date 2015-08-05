@@ -14,7 +14,7 @@ $dbc = mysqli_connect($hostname, $username, $userpass, $dbname) OR die("Could no
 //Set encoding
 mysqli_set_charset($dbc, "utf8");
 
-echo "You are connected to ".$dbname." Database";
+//echo "You are connected to ".$dbname." Database<br/>";
 
 
 ?>

@@ -16,13 +16,21 @@ if($count > 0) {
     
     while($row = mysqli_fetch_array($reader) ) {
     
+        $id = $row["id"];
+        $fname = $row["first_name"];
+        $lname = $row["last_name"];
+        $email = $row["email"];
+        $regdte = $row["regis_dte"];
+        
+        $urlstr = "user_id=".$id."&fname=".$fname."&lname=".$lname."&email=".$email;
+        
         echo "<tr>";
-        echo "<td><a href='edit_user.php?user_id=".$row["id"]."&fname=".$row["first_name"]."&lname=".$row["last_name"]."' />Edit</td>";
-        echo "<td><a href='delete.php?user_id=".$row["id"]."&fname=".$row["first_name"]."&lname=".$row["last_name"]."' />Delete</td>";
-        echo "<td>".$row["last_name"].", ".$row["first_name"];
+        echo "<td><a href='edit.php?".$urlstr."' />Edit</td>";
+        echo "<td><a href='delete.php?".$urlstr."' />Delete</td>";
+        echo "<td>".$lname.", ".$fname;
         echo "</td>";
-        echo "<td>".$row["email"]."</td>";
-        echo "<td>".$row["regis_dte"]."</td>";
+        echo "<td>".$email."</td>";
+        echo "<td>".$regdte."</td>";
         echo "</tr>";
     
     }

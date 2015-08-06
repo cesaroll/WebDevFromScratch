@@ -8,8 +8,14 @@ $query .= " FROM users ORDER BY registration_date ";
 $reader = mysqli_query($dbc, $query);
 $count = mysqli_num_rows($reader);
 
+//Page Title
+echo "<h3>Control Panel</h3>";
+include('navbar.php');
+
 // If rows returned, display records
 if($count > 0) {
+    
+    echo "<p>There are $count registered users.</p>";
     
     echo "<table align='center' border='1' cellspacing='3' cellpading='3' width='75%'>
     <tr><th>Edit</th><th>Delete</th><th>Name</th><th>Email</th><th>Date Registered</th></tr>";

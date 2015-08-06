@@ -24,7 +24,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         
         $affectedrows = mysqli_affected_rows($dbc);
         
-        echo "<br/>".$affectedrows." row is inserted!";
+        if($affectedrows > 0) {
+        
+            echo "<h3>You are registered! Please login <a href='index.php' >here</a></h3>";
+        } else {
+              
+            echo "<p style='color:red;'>Error while inserting to Db.</p>";
+        }
+        
+        
         
     } else{
         echo "<p style='color:red;'>Please fill all values of the form!</p><br/><br/>";
@@ -90,7 +98,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             
         </form>        
 
-        <a href="output.php">Display records from DB</a>
+        <a href="index.php">Go back to login form</a>
    
     </body>
 </html>

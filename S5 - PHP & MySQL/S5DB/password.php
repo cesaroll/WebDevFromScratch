@@ -88,12 +88,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <h1>Change password</h1>
 
+
 <form action="password.php" method="post">
     
     <p>Email: <input type="text" name="email" size="20" maxlength="50" value="<?php if(isset($_POST['email'])) { echo $_POST['email']; } ?>" /></p>
     <p>Current Password: <input type="password" name="pass" size="10" maxlength="50" value="<?php if(isset($_POST['pass'])) { echo $_POST['pass']; } ?>" /></p>
     <p>New Password: <input type="password" name="newpass" size="10" maxlength="50" value="<?php if(isset($_POST['newpass'])) { echo $_POST['newpass']; } ?>" /></p>
     <p>Confirm New Password: <input type="password" name="newpass1" size="10" maxlength="50" value="<?php if(isset($_POST['newpass1'])) { echo $_POST['newpass1']; } ?>" /></p>
-    <p><input type="submit" name="submit" value="Change Password" /></p>
+    <p><input type="submit" name="submit" value="Change Password" /> &nbsp; <a href="output.php">Go Back</a></p>
 </form>
 

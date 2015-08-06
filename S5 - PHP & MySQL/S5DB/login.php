@@ -17,11 +17,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         
         $fname = $row["first_name"];
         
-        echo "<p>Welcome ".$fname.".</p>";
-        include("navbar.php");
+        echo "<p>Welcome ".$fname.", to'll be redirected to control panel in 4 seconds...</p>";
+        header('Refresh: 4; URL=output.php');
 
     } else {
-        echo "User/Password incorrect<br/>";
+        echo "<p>User/Password incorrect. Go back to <a href='index.php'>login</a> </p>";
+        echo "<p>If you are not registered please register <a href='userform.php'>here.</a></p>";
     }
 }
 

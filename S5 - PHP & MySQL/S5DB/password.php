@@ -95,6 +95,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     <p>Current Password: <input type="password" name="pass" size="10" maxlength="50" value="<?php if(isset($_POST['pass'])) { echo $_POST['pass']; } ?>" /></p>
     <p>New Password: <input type="password" name="newpass" size="10" maxlength="50" value="<?php if(isset($_POST['newpass'])) { echo $_POST['newpass']; } ?>" /></p>
     <p>Confirm New Password: <input type="password" name="newpass1" size="10" maxlength="50" value="<?php if(isset($_POST['newpass1'])) { echo $_POST['newpass1']; } ?>" /></p>
-    <p><input type="submit" name="submit" value="Change Password" /> &nbsp; <a href="output.php">Go Back</a></p>
+    <p><input type="submit" name="submit" value="Change Password" /> &nbsp;
+     <a href="output.php">Go Back</a></p>
 </form>
 

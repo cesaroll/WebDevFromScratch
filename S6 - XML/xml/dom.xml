@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+   
+
+<bookstore>
+    <book category="cooking">
+        <title lang="en">Everyday Italian</title>
+        <author>Giadas de Laurentis 1</author>
+        <year>2005</year>
+        <price>30.00</price>
+    </book>
+    <book category="cooking">
+        <title lang="en">Everyday Job</title>
+        <author>Giada de Laurentis 2</author>
+        <year>2005</year>
+        <price>30.00</price>
+    </book>
+</bookstore>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/style.css">
+        
+        <script type="text/javascript">
+        
+            function go(){
+            
+                var jsonObject = {
+                    "name":"John",
+                    "age":"33",
+                    "phone":"43432423432",
+                };
+
+                document.getElementById('name').innerHTML = jsonObject.name;
+                document.getElementById('age').innerHTML = jsonObject.age;
+                document.getElementById('phone').innerHTML = jsonObject.phone;
+
+                
+            }
+            
+            
+        </script>
+        
+    </head>
+    <body>
+        
+        Name:<div id="name"></div><br />
+        Age:<div id="age"></div></html><br />
+        Phone:<div id="phone"></div><br />
+        
+        <input type="button" onclick="go()" value="Go" />
+
+    </body>
+</html>

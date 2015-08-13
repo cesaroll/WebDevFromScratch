@@ -32,6 +32,21 @@
                 
             }
             
+            function go2() {
+             
+                var x = '{"friends":[' + 
+                    '{"firstName":"John", "lastName":"Cena"},' +
+                    '{"firstName":"Alex", "lastName":"Heighs"},' +
+                    '{"firstName":"Anna", "lastName":"Alfa"},' +
+                ']}';
+                
+                //transform into Javascript object (See wikipedia about eval function and security issues)
+                var y = eval("(" + x + ")");
+                
+                document.getElementById('name').innerHTML = y.friends[2].firstName + " " + y.friends[2].lastName;
+                
+            }
+            
             
         </script>
         
@@ -43,6 +58,7 @@
         Phone:<div id="phone"></div><br />
         
         <input type="button" onclick="go()" value="Go" />
+        <input type="button" onclick="go2()" value="Go2" />
 
     </body>
 </html>

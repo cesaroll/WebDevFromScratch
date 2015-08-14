@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/style.css">
+        
+        <script type="text/javascript">
+        
+        function test() {
+            
+            if(window.XMLHttpRequest) {
+                
+                var xmlhttp = new XMLHttpRequest();
+                
+                var uname = document.getElementById('username').value;
+                var passwd = document.getElementById('userpasswd').value;
+                
+                xmlhttp.onreadystatechange = function() {
+                    
+                    if(xmlhttp.readyState == 4){ //if ready
+                    
+                        document.getElementById('result').innerHTML = xmlhttp.responseText;
+                    }
+                }
+                
+                var url = "login.php?name="+uname+"&pass="+passwd;
+                xmlhttp.open("GET", url, true);
+                xmlhttp.send();
+                
+            }
+        }
+        
+        </script>
+        
+    </head>
+    <body>
+       
+        <table border="1">
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" name="name" id="username" /></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="text" name="password" id="userpasswd" ></td>
+            </tr>
+        </table>
+        
+        <p><input type="button" value="Login" onclick="test();"></p>
+        
+        <p><div id="result"></div></p>
+
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/style.css">
+        
+        <script type="text/javascript">
+        
+        function test() {
+         
+            var xmlhttp;
+            
+            if(window.XMLHttpRequest){
+             
+                xmlhttp = new XMLHttpRequest();
+                
+                xmlhttp.onreadystatechange = function() {
+                    
+                    if(xmlhttp.readyState == 4) { // 4 means request has been finished processing
+                        
+                        document.getElementById('result').innerHTML = xmlhttp.responseText;
+                        
+                    }
+                }
+                
+                xmlhttp.open("GET", "test.txt", true);
+                xmlhttp.send();
+            }
+        }
+        
+        </script>
+        
+    </head>
+    <body>
+        
+        <div><input type="button" value="Ajax" onclick="test()" /></div>
+        <div id="result">Result...</div>
+
+    </body>
+</html>

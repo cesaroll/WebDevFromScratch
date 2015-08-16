@@ -15,24 +15,48 @@
         
             $(document).ready(function(){
             
-                $('#btnHide').click(function(){
-                
-                    //alert('Hello');
+                $('#btnChange').click(function(){
                     
-                    $('#div1').hide(1000);
-                    
+                    $('#div1').html('Hello');
                     
                 });
                 
+                $('#btnToggle').click(function(){
+                    
+                    $('#div2').toggle(200);
+                    
+                });
+                
+                /*
+                $('#link').click(function(){
+                    
+                    $('#div3').toggle(200);
+                    
+                });*/
+                
             });
+            
+            
+            function toggle(element, speed){
+                
+                $(element).toggle(speed);
+                
+            }
         
         </script>
         
     </head>
     <body>
         
-        <div id="div1">Testing...</div>
-        <input type="button" id="btnHide" value="Hide It" />
+        <div id="div1">Testing...</div><br />
+        <div id="div2">Toogle</div><br />
+        <div id="div3" style="display:none;">This is today's news, nothing special</div><br />
+        <div id="div4" style="display:none;">This is today's sports, nothing special</div><br />
+        
+        <input type="button" id="btnChange" value="Change" />
+        <input type="button" id="btnToggle" value="Toggle" /><br/>
+        <a href="#" id="link" onclick="toggle('#div3', 500)">News of Today</a>
+        <a href="#" id="link2" onclick="toggle('#div4', 500)">Sports of Today</a>
 
     </body>
 </html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/style.css">
+        
+        <!-- JQuery CDN from Google -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        
+        <script type=text/javascript>
+        
+            $(document).ready(function(){
+              
+                
+                $('#newsLink').hover(function(){
+                    
+                    $('#news').fadeToggle(500);
+                    
+                });
+                
+                $('#sportsLink').dblclick(function(){
+                    
+                    $('#sports').toggle();
+                    
+                });
+                
+            });
+        
+        </script>
+        
+    </head>
+    <body>
+        
+        <a href="#" id="newsLink" >News of Today</a><br/>
+        <div id="news" style="display:none;">This is today's news, nothing special</div><br />
+        
+        <a href="#" id="sportsLink" >Sports of Today</a><br/>
+        <div id="sports" style="display:none;">This is today's sports, nothing special</div><br />
+        
+        
+        
+
+    </body>
+</html>

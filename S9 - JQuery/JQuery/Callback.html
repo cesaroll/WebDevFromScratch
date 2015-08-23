@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title></title>
+
+    <!-- JQuery CDN from Google -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        
+        $(document).ready(function(){
+        
+            $("button").click(function(){
+            
+                /*  With this approach, the efect do not work, it just hide it after the user clicks ok */
+                /*
+                
+                $("p").hide(1000);                
+                alert("You hide it!");
+                
+                */
+                
+                /* Callback function - A function inside another function. */
+                /*  With this approach, we are preventing the alert box to run before the animation */
+                                
+                $("p").hide(1000, function(){alert("You hide it!");});                
+                
+            
+            });
+        
+        });
+        
+    </script>
+
+</head>
+
+<body>
+
+    <div>
+        <button>Hide</button>
+    </div>
+    <div>
+        <p>Hello</p>
+    </div>
+    <div>
+        <p>World!</p>
+    </div>
+    
+
+</body>
+
+</html>

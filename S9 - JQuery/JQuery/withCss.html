@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title></title>
+
+    <!-- JQuery CDN from Google -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            //When btnOne is clicked
+            $('#btnOne').click(function(){
+                //Select all the "p", then set css property:
+                $("p").css("font-size", "20px").css("color", "red");                
+            });
+            
+            //Whnever any "p" is clicked, change that specific "p". Using (this)
+            $("p").click(function(){
+                $(this).css("color", "blue");
+            });
+            
+            //Using Append with "this"
+            $("#btnTwo").click(function(){
+                $("p").append(this);
+            });
+            
+            //Appending Hello
+            $("#btnThree").click(function(){
+                $("#divHello").append("Hello!<br/>").css("color", "green");
+            });
+            
+            //Prepend
+            $("#btnFour").click(function(){
+                $("#divHello").prepend("Hola!<br/>").css("color", "maroon");
+            });
+            
+
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, laudantium.</p>
+    <p>Eligendi aspernatur quia, maiores et consequuntur, culpa explicabo iste magni.</p>
+    <p>Excepturi dolores, dignissimos. Possimus quis ad, placeat labore enim aut!</p>
+    
+    <button id="btnOne">Big & Red</button>
+    <button id="btnTwo">Append</button>
+    <button id="btnThree">Hello</button>
+    <button id="btnFour">Hola</button>
+    
+    <div id="divHello"></div>
+
+</body>
+
+</html>

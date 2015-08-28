@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title></title>
+
+    <!-- JQuery CDN from Google -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#button").click(function(){
+            
+                var user = $("#username").val();
+                var pass = $("#password").val();
+                
+                $.ajax({
+                
+                    type: "POST",
+                    url: "ajax.php",
+                    data: "username="+user+"&password="+pass,
+                    dataType: "json",
+                    success: function(outMsg, outStr, jqXHR){
+                        //$("#result").html(outMsg+outStr+jqXHR);
+                        $("#result").html(outMsg.user + " / " + outMsg.pass);
+                    }
+                });
+                
+            });
+
+        });
+    </script>
+
+</head>
+
+<body>
+
+    Name:<input type="text" id="username" name="username" ><br/>
+    Password:<input type="password" id="password" name="password" > <br/>
+    <input type="button" id="button" value="submit">
+    <br/>
+    <div id="result">Output here</div>
+
+</body>
+
+</html>

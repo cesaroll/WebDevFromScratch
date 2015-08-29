@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title></title>
+
+    <!-- JQuery CDN from Google -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("form").submit(function(){
+            
+                var send = $(this).serialize();
+                
+                $.ajax({
+                
+                    type: "POST",
+                    url: "ajaxSer.php",
+                    data: send,
+                    dataType: "json",
+                    success: function(outMsg){
+                        $("#result").html("Name: " + outMsg.user + " <br> Password: " + outMsg.pass);
+                    }
+                });
+                
+                return false;
+                
+            });
+
+        });
+    </script>
+
+</head>
+
+<body>
+    
+    <form>
+        
+        Name:<input type="text" id="username" name="username" ><br/>
+        Password:<input type="password" id="password" name="password" > <br/>
+        <input type="submit" id="button" value="submit">
+        
+    </form>
+    
+    <p>
+        <div id="result"></div>
+    </p>
+    
+    
+
+    
+
+</body>
+
+</html>

@@ -26,7 +26,11 @@
 
             $("#button").click(function(){
             
+                // Clear Images Div
                 $("#images").empty();
+                
+                //Display loading Image
+                $("#images").append("<img class='img' src='imgs/ajax-loader.gif'/>");
                 
                 var pictType = $("#pictType").val();
                 
@@ -37,6 +41,8 @@
                     format: "json"                    
                 }, function(data){
                 
+                    $("#images").empty();
+                    
                     $.each(data.items, function(i,item){
                     
                         $('<img/>').attr("src", item.media.m).appendTo('#images');

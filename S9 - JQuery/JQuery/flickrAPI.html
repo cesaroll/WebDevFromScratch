@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title></title>
+
+    <!-- JQuery CDN from Google -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <style>
+        
+        img {
+            height: 150px;
+            float: left;
+        }
+    
+    </style>
+   
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#button").click(function(){
+            
+                $("#images").empty();
+                
+                var pictType = $("#pictType").val();
+                
+                $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?", 
+                {                
+                    tags: pictType,
+                    tagmode: "any",
+                    format: "json"                    
+                }, function(data){
+                
+                    $.each(data.items, function(i,item){
+                    
+                        $('<img/>').attr("src", item.media.m).appendTo('#images');
+                        
+                        if(i == 20) return false;
+                    
+                    });
+                    
+                });
+            
+            });        
+
+        });
+    </script>
+
+</head>
+
+<body>
+    
+    Picture Type:<input type="text" id="pictType" />
+    <input type="button" id="button" value="Get Pics!">
+    <p>
+        <div id="images"></div>
+    </p>
+    
+
+</body>
+
+</html>

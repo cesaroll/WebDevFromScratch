@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title></title>
+
+    <!-- JQuery CDN from Google -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <style type="text/css">
+    
+        #menu{
+            height: 30px;
+            background-color: #F90;
+        }
+        
+        #menu li li:hover {
+            background-color: yellow;
+            cursor: pointer;
+        }
+        
+        #manu ul, #menu li {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        #menu li {
+            float: left;
+            width: 120px;
+            list-style-type: none;
+            line-height: 30px;
+            text-align: center;
+        }
+        
+        #menu li ul {
+            position: absolute;
+            background-color: #f90;
+            display: none;
+        }
+        
+        #menu li li {
+            float: none;
+            padding: 2px;
+        }
+        
+        #menu a {
+            color: #000;
+            text-decoration: none;
+        }
+        
+    </style>
+   
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#menu li").hover(function(){
+                $(this).children(":hidden").slideDown();
+            }, function(){
+                $(this).parent().find("ul").slideUp();
+            });
+
+
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <div id="menu">
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Info</a>
+                <ul>
+                    <li><a href="#">Submenu1</a></li>
+                    <li><a href="#">Submenu1</a></li>
+                    <li><a href="#">Submenu1</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Portfolio</a>
+                <ul>
+                    <li><a href="#">Submenu1</a></li>
+                    <li><a href="#">Submenu1</a></li>
+                    <li><a href="#">Submenu1</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

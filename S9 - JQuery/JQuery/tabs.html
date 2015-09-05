@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title></title>
+
+    <!-- JQuery CDN from Google -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    
+    <style>
+        
+        #tabs {
+            font-size: 12px;
+            widows: 200px;
+        }
+        
+    </style>
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#tabs").tabs({
+                    beforeLoad: function(event, ui){
+                        ui.jqXHR.error(function(){
+                            ui.panel.html('Server Error!');
+                        });
+                    },
+                    event:'mouseover',                    
+                    activate: function(event, ui) {
+                        $.cookie('selected-tab', ui.newTab.index(), {expires: 1});
+                    },
+                    active: $.cookie('selected-tab'),
+                }
+            ).find('.ui-tabs-nav').sortable({axis: 'x'});
+
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <div id="tabs">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="tabs.php">PHP</a></li>
+        </ul>
+        
+        
+        <div id="about">
+            <p>Welcome to my about page!</p>
+        </div>
+        
+        <div id="contact">
+            <p>Welcome to my contact page!</p>
+        </div>
+        
+        <div id="home">
+            <p>Welcome to my home page!</p>
+        </div>
+        
+    </div>
+
+    
+
+</body>
+
+</html>

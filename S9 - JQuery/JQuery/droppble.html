@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title></title>
+
+    <!-- JQuery CDN from Google -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    
+    <style>
+    
+        #dropbox{
+            height: 200px;
+            width: 200px;
+            background-color: aquamarine;
+        }
+        
+        .border {
+             border: 1px solid black;   
+        }
+        
+    </style>
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $(".name, .city").draggable({containment: 'document', 
+                                 revert: true, 
+                                 start: function() {
+                                    contents = $(this).text();
+                                 }
+                                });
+            
+            $("#dropbox").droppable({
+                containment: 'parent',
+                hoverClass: 'border',
+                tolerance: 'touch',
+                accept: '.name',
+                /*over: function() {
+                    $("#dropbox").text("Something is overing!");
+                },
+                out: function() {
+                    $("#dropbox").text("");
+                },*/
+                drop: function() {
+                    $("#dropbox").append(contents+ "<br/>");
+                }
+            });        
+
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <span class="name">Cesar</span>
+    <span class="name">Omar</span>
+    <span class="city">London</span>
+
+    <div id="dropbox"></div>
+
+</body>
+
+</html>

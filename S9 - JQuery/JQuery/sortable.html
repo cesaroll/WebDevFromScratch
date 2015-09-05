@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title></title>
+
+    <!-- JQuery CDN from Google -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    
+    <style>
+    
+        ul {
+            border:1px solid black;
+            padding: 0px;
+            width: 100px;
+            height: 100px;
+            list-style: none;
+        }
+    
+    </style>
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#cities, #food").sortable({containment: 'document',
+                                   tolerance: 'pointer',
+                                   cursor: 'pointer',
+                                   revert: 'true',
+                                   opacity: 0.60,
+                                   connectWith: '#cities, #food',
+                                   update: function() {
+                                       list = $(this).text();
+                                       $("#newlist").text(list);
+                                   }
+                                  });
+
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <ul id="cities">
+        <li>London</li>
+        <li>Madrid</li>
+        <li>Lisbon</li>
+    </ul>
+    <ul id="food">
+        <li>Apples</li>
+        <li>Bananas</li>
+        <li>Peaches</li>
+    </ul>
+
+    <div id="newlist"></div>
+
+</body>
+
+</html>
